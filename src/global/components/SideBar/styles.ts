@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const DivSideBar = styled.div<{status: boolean}>`
-    background-color: red;
+    background-color: gray;
 
-    width: ${(props) => props.status ? '350px': '0px'};
+    width: ${(props) => props.status ? '200px': '0px'};
 
     display: flex;
     flex-direction: column;
@@ -20,6 +20,78 @@ export const DivSideBar = styled.div<{status: boolean}>`
     transition: all ease 0.5s;
 
     z-index: 999;
+
+    .top-sideBar{
+        display: flex;
+        justify-content: center;
+
+        white-space: nowrap; // Impede que na hora de fechar o conteúdo fique zoado.
+    }
+
+    .main-sideBar{
+        /* background-color: purple; */
+
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        /* gap: 1rem; */
+
+        white-space: nowrap; // Impede que na hora de fechar o conteúdo fique zoado.
+
+        a{
+            /* background-color: white; */
+
+            display: flex;
+            align-items: center;
+            
+            /* border: solid; */
+            padding: 10px 5px;
+            gap: 1rem;
+            font-size: 1.1em;
+
+            color: black;
+            text-decoration: none;
+
+            transition: all ease 0.5s;
+
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.5);
+                color: blue;
+            }
+        }
+    }
+
+    .bottom-sideBar{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        white-space: nowrap; // Impede que na hora de fechar o conteúdo fique zoado.
+
+        button{
+            background-color: gray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            padding-bottom: 5px;
+
+            font-size: 1.2em;
+
+            cursor: pointer;
+
+            border-style: none;
+
+            transition: all ease 0.5s;
+
+            &:hover{
+                opacity: 73%;
+            }
+        }
+    }
+    
 `;
 
 export const DivShadow = styled.div<{status: boolean}>`
