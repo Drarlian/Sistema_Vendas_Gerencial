@@ -1,9 +1,11 @@
+import { useContext } from 'react';
 import LoginPage from '../pages/Login';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const AuthGuard = ({children}: {children: JSX.Element}) => {
-    const user = true;
+    const { usuarioAtual } = useContext(AuthContext);
 
-    if (user){
+    if (usuarioAtual){
         return children
     } else {
         return <LoginPage />

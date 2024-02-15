@@ -6,11 +6,14 @@ import { FaHome } from "react-icons/fa";
 import { IoPeopleSharp, IoSettings, IoSunny } from "react-icons/io5";
 import { RiAdminFill } from "react-icons/ri";
 import { CgLogOff } from 'react-icons/cg';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 // import { Container } from './styles';
 
 const SideBar: React.FC = () => {
-    const {statusSideBar, alterarStatusSideBar} = useContext(UtilsContext)
+    const {statusSideBar, alterarStatusSideBar} = useContext(UtilsContext);
+
+    const { fazerLogout } = useContext(AuthContext);
 
     return (
         <>
@@ -25,7 +28,7 @@ const SideBar: React.FC = () => {
                 </div>
                 <div className='bottom-sideBar'>
                     <button><IoSunny /></button>
-                    <button><CgLogOff /></button>
+                    <button onClick={fazerLogout}><CgLogOff /></button>
                     <button><IoSettings /></button>
                 </div>
             </DivSideBar>
