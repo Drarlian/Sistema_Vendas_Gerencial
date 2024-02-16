@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const DivSideBar = styled.div<{status: boolean}>`
-    background-color: gray;
+    background-color: #3D3B40;
 
-    width: ${(props) => props.status ? '200px': '0px'};
+    width: ${(props) => props.status ? '350px': '0px'};
 
     display: flex;
     flex-direction: column;
@@ -21,22 +21,30 @@ export const DivSideBar = styled.div<{status: boolean}>`
 
     z-index: 999;
 
+    *{
+        font-size: larger;
+        color: white;
+    }
+
     .top-sideBar{
         display: flex;
         justify-content: center;
 
         white-space: nowrap; // Impede que na hora de fechar o conteúdo fique zoado.
+
+        border-bottom: solid;
     }
 
     .main-sideBar{
         /* background-color: purple; */
-
+        
         display: flex;
         flex-direction: column;
         flex: 1;
-        /* gap: 1rem; */
-
+        
         white-space: nowrap; // Impede que na hora de fechar o conteúdo fique zoado.
+
+        /* gap: 1rem; */
 
         a{
             /* background-color: white; */
@@ -49,14 +57,14 @@ export const DivSideBar = styled.div<{status: boolean}>`
             gap: 1rem;
             font-size: 1.1em;
 
-            color: black;
+            /* color: black; */
             text-decoration: none;
 
             transition: all ease 0.5s;
 
             &:hover{
                 background-color: rgba(0, 0, 0, 0.5);
-                color: blue;
+                /* color: blue; */
             }
         }
     }
@@ -69,8 +77,11 @@ export const DivSideBar = styled.div<{status: boolean}>`
 
         white-space: nowrap; // Impede que na hora de fechar o conteúdo fique zoado.
 
+        border-top: solid;
+        padding: 5px;
+
         button{
-            background-color: gray;
+            background-color: transparent;
 
             display: flex;
             justify-content: center;
@@ -83,11 +94,15 @@ export const DivSideBar = styled.div<{status: boolean}>`
             cursor: pointer;
 
             border-style: none;
+            border-radius: 10px;
+            padding: 3px;
+            margin-right: 5px;
+            margin-left: 5px;
 
             transition: all ease 0.5s;
 
             &:hover{
-                opacity: 73%;
+                background-color: rgba(0, 0, 0, 0.5);
             }
         }
     }
@@ -104,7 +119,7 @@ export const DivShadow = styled.div<{status: boolean}>`
     left: 0;
 
     display: ${props => props.status ? 'inline': 'none'};
-    /* opacity: ${props => props.status ? '1': '0'}; */
+    opacity: ${props => props.status ? 'inline': 'none'};
 
     z-index: 9;
 `;

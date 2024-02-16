@@ -25,10 +25,10 @@ export const DivLogin = styled.div`
         /* flex-direction: column; */
         box-sizing: border-box;
 
-        height: 250px;
+        height: 380px;
 
         border-radius: 5px;
-        padding: 10px;
+        padding: 20px;
         gap: 0.2rem;
 
         
@@ -46,59 +46,23 @@ export const DivLogin = styled.div`
     
                 /* font-family: 'Courier New', Courier, monospace; */
             }
-            
-            div{
-                /* background-color: green; */
-                
-                display: flex;
-                flex-direction: column;
 
-                input{
-                    background-color: #497240;
-                    color: white;
-
-                    border-radius: 5px;
-                    border: none;
-                    outline: none;  // Tirar a borda do input quando ele for selecionado.
-
-                    padding: 3px;
-
-                    font-family: Arial, Helvetica, sans-serif;
-
-                    &::placeholder{  // Alterando as propriedades do Place Holder.
-                        color: white;
-                        opacity: 80%;
-                    }
-                    
-                }
-
-                button{
-                    background-color: #497240;
-                    color: white;
-
-                    cursor: pointer;
-
-                    border-style: none;
-                    border-radius: 5px;
-                    padding: 3px;
-
-                    font-weight: bold;
-
-                    transition: all ease 0.6s;
-
-                    &:hover{
-                        opacity: 83%;
-                    }
-                }
+            label{
+                margin-bottom: 0;
+                margin-top: 0;
             }
-            
+
+            button{
+                background-color: #497240;
+                margin-top: 4%;
+            }
         }
 
-        form div:nth-child(4){
-            /* background-color: red; */
+        /* form div:nth-child(4){
+            // background-color: red;
             
             flex: 1;
             justify-content: center;
-        }
+        } */
     }
 `;

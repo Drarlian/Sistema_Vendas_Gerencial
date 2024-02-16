@@ -17,7 +17,9 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
         {
             usuario: 'renatinho321',
             senha: '123',
-            nome: 'Renato',
+            nome: 'Renato Alberto',
+            primeiro_nome: 'Renato',
+            ultimo_nome: 'Alberto',
             idade: 25,
             cargo: 'Cantor',
             sexo: 'M',
@@ -26,7 +28,9 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
         {
             usuario: 'carlinhos',
             senha: '321',
-            nome: 'Carlos',
+            nome: 'Carlos Eduardo',
+            primeiro_nome: 'Carlos',
+            ultimo_nome: 'Eduardo',
             idade: 53,
             cargo: 'Pintor',
             sexo: 'M',
@@ -35,7 +39,9 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
         {
             usuario: 'art',
             senha: '654321',
-            nome: 'Arthur',
+            nome: 'Arthur Leywin',
+            primeiro_nome: 'Arthur',
+            ultimo_nome: 'Leywin',
             idade: 22,
             cargo: 'Executivo',
             sexo: 'M',
@@ -44,7 +50,9 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
         {
             usuario: 'yaya',
             senha: '123456',
-            nome: 'Yasmin',
+            nome: 'Yasmin Barbosa',
+            primeiro_nome: 'Yasmin',
+            ultimo_nome: 'Barbosa',
             idade: 20,
             cargo: 'Secretaria',
             sexo: 'F',

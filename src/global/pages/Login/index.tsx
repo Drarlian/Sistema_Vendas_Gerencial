@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { DivLogin } from './styles';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { Button, TextField } from '@mui/material';
 
 const LoginPage: React.FC = () => {
     const [ usuario, setUsuario ] = useState('');
@@ -35,17 +36,11 @@ const LoginPage: React.FC = () => {
         <div className='container-login'>
             <form>
                 <h2>Login</h2>
-                <div>
-                    <label>Usuário:</label>
-                    <input value={usuario} onChange={(e) => setUsuario(e.target.value)} placeholder='login...' />
-                </div>
-                <div>
-                    <label>Senha:</label>
-                    <input value={senha} onChange={(e) => setSenha(e.target.value)} type='password' placeholder='senha...' />
-                </div>
-                <div>
-                    <button onClick={logar}>Entrar</button>
-                </div>
+                <label>Login:</label>
+                <TextField id="outlined-basic" label="Login" variant="outlined" onChange={(e) => setUsuario(e.target.value)} />
+                <label>Senha:</label>
+                <TextField id="outlined-basic" label="Senha" variant="outlined" onChange={(e) => setSenha(e.target.value)} type='password'/>
+                <Button variant="contained" type="submit" onClick={logar}>Entrar</Button>
             </form>
         </div>
     </DivLogin>

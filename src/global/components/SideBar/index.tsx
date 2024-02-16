@@ -22,9 +22,9 @@ const SideBar: React.FC = () => {
                     <h2>Title</h2>
                 </div>
                 <div className='main-sideBar'>
-                    <Link to={'/'} onClick={alterarStatusSideBar}><FaHome /> Home</Link>
-                    <Link to={'/seller'} onClick={alterarStatusSideBar}><IoPeopleSharp /> Seller Page</Link>
-                    <Link to={'/admin'} onClick={alterarStatusSideBar}><RiAdminFill /> Admin Page</Link>
+                    <Link to={'/'} onClick={alterarStatusSideBar}><span><FaHome /></span> Home</Link>
+                    <Link to={'/seller'} onClick={alterarStatusSideBar}><span><IoPeopleSharp /></span> Seller Page</Link>
+                    <Link to={'/admin'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Admin Page</Link>
                 </div>
                 <div className='bottom-sideBar'>
                     <button><IoSunny /></button>

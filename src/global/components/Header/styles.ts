@@ -15,10 +15,13 @@ export const DivHeader = styled.div`
     padding-right: 5px;
     padding-left: 5px;
 
-    height: 60px;
-
+    height: 70px;
 
     z-index: 99;
+
+    *{
+        font-size: larger;
+    }
 
     .area-esquerda{
         display: flex;
@@ -82,11 +85,11 @@ export const DivHeader = styled.div`
             img{
                 /* background-color: pink; */
 
-                height: 50%;
-                width: 32px;
+                height: 95%;
+                /* width: 70%; */
                 
                 border-radius: 50%;
-                border: solid green 2.5px;
+                border: solid green 3.2px;
             }
         }
     }
