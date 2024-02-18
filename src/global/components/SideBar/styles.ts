@@ -106,6 +106,14 @@ export const DivSideBar = styled.div<{status: boolean}>`
             }
         }
     }
+
+    @media (max-width: 600px){
+        width: ${(props) => props.status ? '45%': '0px'};
+    }
+
+    @media (max-width: 500px){
+        width: ${(props) => props.status ? '55%': '0px'};
+    }
     
 `;
 

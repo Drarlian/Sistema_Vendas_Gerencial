@@ -23,4 +23,14 @@ export const DivMenu = styled.div`
     h2{
         font-size: 3em;
     }
+
+    @media (max-width: 600px){
+        h1 {
+            font-size: 2.8em;
+        }
+
+        h2{
+            font-size: 2.5em;
+        }
+    }
 `;

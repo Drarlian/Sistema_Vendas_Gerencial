@@ -73,7 +73,7 @@ export const AuthProvider = ({children}: {children: ReactNode}) => {
         if (usuarioExistente.length > 0){
             Cookies.set('usuario', JSON.stringify(usuarioExistente[0]), {expires: expiracao})
             setUsuarioAtual(usuarioExistente[0])
-            toast.success('Entrando...')
+            // toast.success('Entrando...')
             return usuarioExistente[0]
         } else {
             toast.error('Usuário não encontrado!')
