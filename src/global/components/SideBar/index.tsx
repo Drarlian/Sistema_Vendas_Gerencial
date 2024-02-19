@@ -15,6 +15,11 @@ const SideBar: React.FC = () => {
 
     const { fazerLogout } = useContext(AuthContext);
 
+    function deslogar(){
+        alterarStatusSideBar()
+        fazerLogout()
+    }
+
     return (
         <>
             <DivSideBar status={statusSideBar}>
@@ -28,7 +33,7 @@ const SideBar: React.FC = () => {
                 </div>
                 <div className='bottom-sideBar'>
                     <button><IoSunny /></button>
-                    <button onClick={fazerLogout}><CgLogOff /></button>
+                    <button onClick={deslogar}><CgLogOff /></button>
                     <button><IoSettings /></button>
                 </div>
             </DivSideBar>

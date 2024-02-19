@@ -55,6 +55,12 @@ export const DivLogin = styled.div`
             button{
                 background-color: #497240;
                 margin-top: 4%;
+
+                transition: all ease 0.5s;
+
+                &:hover{
+                    background-color: #2B7930;
+                }
             }
         }
 
