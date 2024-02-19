@@ -8,6 +8,8 @@ export const DivRegister = styled.div`
     justify-content: center;
     flex: 1;
 
+    font-size: larger;
+
     .container-register{
         /* background-color: blue; */
 

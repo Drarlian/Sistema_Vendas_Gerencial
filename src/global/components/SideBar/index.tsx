@@ -13,7 +13,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 const SideBar: React.FC = () => {
     const {statusSideBar, alterarStatusSideBar} = useContext(UtilsContext);
 
-    const { fazerLogout } = useContext(AuthContext);
+    const { usuarioAtual, fazerLogout } = useContext(AuthContext);
 
     function deslogar(){
         alterarStatusSideBar()
@@ -28,8 +28,10 @@ const SideBar: React.FC = () => {
                 </div>
                 <div className='main-sideBar'>
                     <Link to={'/'} onClick={alterarStatusSideBar}><span><FaHome /></span> Home</Link>
-                    <Link to={'/seller'} onClick={alterarStatusSideBar}><span><IoPeopleSharp /></span> Seller Page</Link>
-                    <Link to={'/admin'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Admin Page</Link>
+                    {usuarioAtual?.role == 'USER'? <Link to={'/seller'} onClick={alterarStatusSideBar}><span><IoPeopleSharp /></span> Seller Page</Link>: ''}
+                    {usuarioAtual?.role == 'ADMIN'? <Link to={'/admin'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Admin Page</Link>: ''}
+                    {usuarioAtual?.role == 'ADMIN'? <Link to={'/admin/register'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Cadastrar Usuário</Link>: ''}
+                    {usuarioAtual?.role == 'ADMIN'? <Link to={'/admin/users'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Visualizar Usuários</Link>: ''}
                 </div>
                 <div className='bottom-sideBar'>
                     <button><IoSunny /></button>
