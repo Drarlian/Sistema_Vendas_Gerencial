@@ -21,8 +21,8 @@ const Header: React.FC = () => {
                 </div>
                 <div className='infos-usuario'>
                     <div className='div-name-role'>
-                        <h3>{usuarioAtual.nome}</h3>
-                        <h4>{usuarioAtual.cargo}</h4>
+                        <h3>{usuarioAtual?.nome}</h3>
+                        <h4>{usuarioAtual?.cargo}</h4>
                     </div>
                     <div className='div-imagem-usuario'>
                         <img src={ImagemTeste} />

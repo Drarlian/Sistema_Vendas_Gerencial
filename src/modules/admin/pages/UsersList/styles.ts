@@ -90,19 +90,34 @@ export const DivUsersList = styled.div`
         .container-table{
             background-color: pink;
 
-            display: flex;
             box-sizing: border-box;
 
-            /* width: 50%; */
-            overflow-y: auto;
+            height: calc(100vh - (60px + 60px + 10px + 60px));  
+            // Posicionando a tabela, tudo acima dela fica grudado no topo, o header tem position: sticky
+            // ** Essencial para o conceito de grudar no topo. **
+
+            overflow: auto;  // Se passar da tela permite o scroll.
+            // ** Essencial para o conceito de grudar no topo. **
 
             table{
                 width: 100%;
-                box-sizing: border-box;
                 
+                thead{
+                    tr{
+                        th{
+                            background-color: blue;
+
+                            // Grudando o thead no topo da tela, junto com os outros elementos.
+                            position: sticky;
+                            top: 0;
+                            // ** Essencial para o conceito de grudar no topo. **
+
+                            padding: 10px;
+                        }
+                    }
+                }
 
                 th, td{
-                    box-sizing: border-box;
                     border: solid;
                 }
             }
