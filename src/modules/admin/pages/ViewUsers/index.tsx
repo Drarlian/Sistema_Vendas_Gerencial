@@ -1,30 +1,19 @@
 import React, { useContext } from 'react';
-import { DivUsersList } from './styles';
+import { DivViewUsers } from './styles';
 import { Button } from '@mui/material';
 import { LuSearch } from 'react-icons/lu';
 import { AuthContext } from '../../../../contexts/AuthContext';
 import { IoDocumentText } from 'react-icons/io5';
 import { FaTrashAlt } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-// import { Container } from './styles';
-
-const UsersList: React.FC = () => {
-  // id: number,
-  // usuario: string, <-
-  // senha: string,
-  // email: string, <-
-  // nome: string, <-
-  // primeiro_nome: string,
-  // ultimo_nome: string,
-  // idade: number,
-  // cargo: string, <-
-  // sexo: string,
-  // role: string, <-
-
+const ViewUsers: React.FC = () => {
   const { usuarios } = useContext(AuthContext)
 
+  const navegar = useNavigate();
+
   return (
-    <DivUsersList>
+    <DivViewUsers>
       <div className='container-lista-usuarios'>
         <div className='container-header'>
           <div>
@@ -67,7 +56,7 @@ const UsersList: React.FC = () => {
                       </button>
                     </td>
                     <td>
-                      <button>
+                      <button onClick={() => navegar(`/admin/infos-user/${usuario.id}`)}>
                         <IoDocumentText />
                       </button>
                     </td>
@@ -78,8 +67,8 @@ const UsersList: React.FC = () => {
           </table>
         </div>
       </div>
-    </DivUsersList>
+    </DivViewUsers>
   );
 }
 
-export default UsersList;
+export default ViewUsers;

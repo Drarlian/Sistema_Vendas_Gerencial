@@ -33,7 +33,7 @@ const SideBar: React.FC = () => {
                     {usuarioAtual?.role == 'USER'? <Link to={'/seller'} onClick={alterarStatusSideBar}><span><IoPeopleSharp /></span> Seller Page</Link>: ''}
                     {usuarioAtual?.role == 'ADMIN'? <Link to={'/admin'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Admin Page</Link>: ''}
                     {usuarioAtual?.role == 'ADMIN'? <Link to={'/admin/register'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Cadastrar Usuário</Link>: ''}
-                    {usuarioAtual?.role == 'ADMIN'? <Link to={'/admin/users'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Visualizar Usuários</Link>: ''}
+                    {usuarioAtual?.role == 'ADMIN'? <Link to={'/admin/view-users'} onClick={alterarStatusSideBar}><span><RiAdminFill /></span> Visualizar Usuários</Link>: ''}
                 </div>
                 <div className='bottom-sideBar'>
                     <button><IoSunny /></button>

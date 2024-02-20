@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivUsersList = styled.div`
+export const DivViewUsers = styled.div`
     /* background-color: red; */
 
     display: flex;
