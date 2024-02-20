@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { DivUsersList } from './styles';
 import { Button } from '@mui/material';
 import { LuSearch } from 'react-icons/lu';
+import { AuthContext } from '../../../../contexts/AuthContext';
+import { IoDocumentText } from 'react-icons/io5';
+import { FaTrashAlt } from 'react-icons/fa';
 
 // import { Container } from './styles';
 
@@ -17,6 +20,8 @@ const UsersList: React.FC = () => {
   // cargo: string, <-
   // sexo: string,
   // role: string, <-
+
+  const { usuarios } = useContext(AuthContext)
 
   return (
     <DivUsersList>
@@ -44,243 +49,31 @@ const UsersList: React.FC = () => {
                 <th>Email</th>
                 <th>Cargo</th>
                 <th>Role</th>
-                <th>Ações</th>
+                <th colSpan={2}>Ações</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-              <tr>
-                <td>Teste</td>
-                <td>Teste da Silva</td>
-                <td>teste@gmail.com</td>
-                <td>Tester</td>
-                <td>User</td>
-                <td><button>A</button></td>
-              </tr>
-
+              {usuarios.map((usuario) => {
+                return (
+                  <tr key={usuario.id}>
+                    <td>{usuario.usuario}</td>
+                    <td>{usuario.primeiro_nome}</td>
+                    <td>{usuario.email}</td>
+                    <td>{usuario.cargo}</td>
+                    <td>{usuario.role}</td>
+                    <td>
+                      <button>
+                        <FaTrashAlt />
+                      </button>
+                    </td>
+                    <td>
+                      <button>
+                        <IoDocumentText />
+                      </button>
+                    </td>
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>

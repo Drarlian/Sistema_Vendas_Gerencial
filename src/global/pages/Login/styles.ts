@@ -20,12 +20,14 @@ export const DivLogin = styled.div`
 
     .container-login{
         background-color: white;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 
         display: flex;
         /* flex-direction: column; */
         box-sizing: border-box;
 
-        height: 380px;
+        height: 400px;
+        width: 320px;
 
         border-radius: 5px;
         padding: 20px;
@@ -40,6 +42,8 @@ export const DivLogin = styled.div`
             /* justify-content: space-evenly; */
             
             gap: 1rem;
+
+            width: 100%;
             
             h2{
                 text-align: center;

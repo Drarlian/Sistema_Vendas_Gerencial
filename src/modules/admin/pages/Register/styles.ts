@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const DivRegister = styled.div`
-    /* background-color: red; */
+    /* background-color: violet; */
 
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     flex: 1;
+    box-sizing: border-box;
+
+    height: calc(100vh - 70px);
+    max-width: 100%;
+    padding: 0px 10px;
 
     font-size: larger;
 
@@ -33,7 +38,7 @@ export const DivRegister = styled.div`
             }
 
             .container-botao{
-                /* background-color: red; */
+                /* background-color: pink; */
 
                 display: flex;
                 justify-content: center;
@@ -50,6 +55,20 @@ export const DivRegister = styled.div`
                         background-color: #2B7930;
                     }
                 }
+            }
+        }
+    }
+
+    @media (max-width: 600px){
+        font-size: large;
+         /* height: calc(100vh - 70px); */
+         /* width: 100vw; */
+
+         .container-register{
+            form{
+                input{
+                    width: auto;
+                };
             }
         }
     }

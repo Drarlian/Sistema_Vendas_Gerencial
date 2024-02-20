@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { DivShadow, DivSideBar } from './styles';
 import { UtilsContext } from '../../../contexts/UtilsContext';
 import { FaHome } from "react-icons/fa";
@@ -20,6 +20,8 @@ const SideBar: React.FC = () => {
         fazerLogout()
     }
 
+    const navegar = useNavigate();
+
     return (
         <>
             <DivSideBar status={statusSideBar}>
@@ -36,7 +38,7 @@ const SideBar: React.FC = () => {
                 <div className='bottom-sideBar'>
                     <button><IoSunny /></button>
                     <button onClick={deslogar}><CgLogOff /></button>
-                    <button><IoSettings /></button>
+                    <button onClick={() => {alterarStatusSideBar(); navegar('/settings');}}><IoSettings /></button>
                 </div>
             </DivSideBar>
             <DivShadow status={statusSideBar} onClick={alterarStatusSideBar} />

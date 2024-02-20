@@ -6,6 +6,7 @@ import Menu from '../global/pages/Menu';
 import Register from '../modules/admin/pages/Register';
 import { AuthContext } from '../contexts/AuthContext';
 import UsersList from '../modules/admin/pages/UsersList';
+import Settings from '../global/pages/Settings';
 
 const Rotas: React.FC = () => {
   const { usuarioAtual } = useContext(AuthContext)
@@ -19,6 +20,7 @@ const Rotas: React.FC = () => {
         <Route path='/admin' element={<AuthGuard><Layout><p>Admin Page</p></Layout></AuthGuard>} />
         <Route path='/admin/register' element={<AuthGuard><Layout>{role === 'ADMIN' ? <Register/>: <Menu/>}</Layout></AuthGuard>} />
         <Route path='/admin/users' element={<AuthGuard><Layout>{role === 'ADMIN' ? <UsersList/>: <Menu/>}</Layout></AuthGuard>} />
+        <Route path='/settings' element={<AuthGuard><Layout><Settings/></Layout></AuthGuard>} />
     </Routes>
   );
 }
