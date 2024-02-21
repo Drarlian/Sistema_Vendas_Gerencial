@@ -4,6 +4,7 @@ import { DivLogin } from './styles';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { Button, TextField } from '@mui/material';
+import ImagemFundo from '../../../assets/login-background.jpg'
 
 const LoginPage: React.FC = () => {
     const [ usuario, setUsuario ] = useState('');
@@ -33,15 +34,29 @@ const LoginPage: React.FC = () => {
 
   return (
     <DivLogin>
-        <div className='container-login'>
-            <form>
-                <h2>Login</h2>
-                <label>Login:</label>
-                <TextField id="outlined-basic" label="Login" variant="outlined" onChange={(e) => setUsuario(e.target.value)} />
-                <label>Senha:</label>
-                <TextField id="outlined-basic" label="Senha" variant="outlined" onChange={(e) => setSenha(e.target.value)} type='password'/>
-                <Button variant="contained" type="submit" onClick={logar}>Entrar</Button>
-            </form>
+        <div className='container-imagem'>
+            <div className='div-imagem'>
+                <img src={ImagemFundo} />
+            </div>
+        </div>
+        <div className='container-formulario'>
+            <div className='div-formulario'>
+                <form>
+                    <div className='div-titulos'>
+                        <h2>Título</h2>
+                        <h3>Sub Título</h3>
+                    </div>
+                    <div className='div-input'>
+                        <label>Login</label>
+                        <input name='login' value={usuario} onChange={(e) => setUsuario(e.target.value)} />
+                    </div>
+                    <div className='div-input'>
+                        <label>Senha</label>
+                        <input name='senha' value={senha} onChange={(e) => setSenha(e.target.value)} type='password' />
+                    </div>
+                    <Button variant="contained" type="submit" onClick={logar}>Entrar</Button>
+                </form>
+            </div>
         </div>
     </DivLogin>
   );
