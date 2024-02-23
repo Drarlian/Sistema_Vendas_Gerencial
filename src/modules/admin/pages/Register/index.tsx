@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { DivRegister } from './styles';
 import { Button, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, TextField } from '@mui/material';
 import { AuthContext } from '../../../../contexts/AuthContext';
+import PersonIcon from '@mui/icons-material/Person';
 
 const Register: React.FC = () => {
     const [ nomeUsuario, setNomeUsuario ] = useState('');
@@ -32,6 +33,9 @@ const Register: React.FC = () => {
     return (
         <DivRegister>
             <div className='container-register'>
+                <div className='container-icone'>
+                    <PersonIcon />
+                </div>
                 <h1>Cadastro de Usuário</h1>
                 <form>
                     <TextField id="outlined-basic" label="Usuário" variant="outlined" onChange={(e) => setNomeUsuario(e.target.value)} />

@@ -41,6 +41,8 @@ export const DivLogin = styled.div`
         justify-content: center;
         align-items: center;
 
+        box-sizing: border-box;
+
         width: 64%;
 
         .div-imagem{
@@ -54,6 +56,7 @@ export const DivLogin = styled.div`
             height: 90%;
 
             padding: 15px;
+            padding-left: 40px;
 
             img{
                 width: 100%;

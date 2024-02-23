@@ -12,6 +12,7 @@ export const DivRegister = styled.div`
     height: calc(100vh - 70px);
     max-width: 100%;
     padding: 0px 10px;
+    
 
     font-size: larger;
 
@@ -22,6 +23,28 @@ export const DivRegister = styled.div`
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
+        box-sizing: border-box;
+
+        padding-top: 30px;
+
+        .container-icone{
+            background-color: purple;
+            color: white;
+
+            margin-bottom: 0px;
+
+            display: flex;
+            box-sizing: border-box;
+
+            padding: 7px;
+            border-radius: 30px;
+        }
+
+        h1{
+            margin-top: 10px;
+
+            font-weight: normal;
+        }
 
         form{
             /* background-color: yellow; */
@@ -32,9 +55,13 @@ export const DivRegister = styled.div`
             padding: 5px;
             gap: 15px;
 
+            :nth-child(3), :nth-child(4){
+                grid-column: span 2;
+            }
+
             input{
                 /* background-color: red; */
-                width: 20rem;
+                width: 18rem;
             }
 
             .container-botao{
